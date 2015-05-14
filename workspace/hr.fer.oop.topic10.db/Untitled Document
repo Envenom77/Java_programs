@@ -1,0 +1,18 @@
+				public StudentsPanel(){
+					setVisible(true);
+					setDefaultCloseOperation(EXIT_ON_CLOSE);
+					getContentPane().setLayout(new BorderLayout());
+					Dimension size = getPreferredSize();
+					setPreferredSize(size);
+					//novi JComboBox
+					JComboBox<String> box = new JComboBox<>();
+					for(int i = 0; i < studenti.size(); i++)
+						box.addItem(studenti.get(i));
+					
+					getContentPane().add(box, BorderLayout.NORTH);
+					
+					JLabel label = new JLabel("Ime");
+					getContentPane().add(label,SwingConstants.CENTER);
+					JLabel label2 = new JLabel("Prezime");
+					getContentPane().add(label2);
+				}
